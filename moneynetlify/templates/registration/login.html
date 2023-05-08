@@ -1,0 +1,21 @@
+{% extends 'user_room/base.html' %}
+
+{% block map %}
+{% endblock %}
+
+{% block user %}
+{% endblock %}
+
+{% block content%}
+<div>
+    <a class="list-group-item", href="{% url 'home' %}">На Главную</a>
+
+    <h1>Вход</h1>
+
+    <form action="{% url 'login' %}" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">submit</button>
+    </form>
+</div>
+{% endblock %}

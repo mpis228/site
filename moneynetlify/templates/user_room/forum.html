@@ -1,0 +1,21 @@
+{% extends 'user_room/base.html' %}
+
+{% block content%}
+{% for post in post_list %}
+<div class="context">
+    <div class="text">
+        <a>{{ post.author }}</a>
+    </div>
+
+    <div class="text">
+        <a>{{ post.title }}</a>
+    </div>
+
+    <div>
+        <a>{{ post.content}}</a>
+        <a>({{post.time_create}})</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'user_room/base.html' %}
+{% block user %}
+<div>
+    <a href="{% url 'main' %}">На главную </a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <form  method="post">
+        {% for m in form %}
+        <li><a>{{m.label}}</a> <a>{{ m }}</a></li>
+        {% csrf_token %}
+        {% endfor %}
+        <button type="submit"> зарегестрироваться</button>
+    </form>
+</div>
+
+{% endblock %}
+
